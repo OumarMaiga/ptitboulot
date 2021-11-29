@@ -22,7 +22,7 @@ Pour mettre à jour la base de donnée utilise la commande "php artisan migrate"
 
 ## Authentification 
 
-- [Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze-installation)
+- [Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze-installation)(utilisé pour générer les pas d'authentification)
 
 Pas besoin de lancer la commande d'installation puisque c'est déjà installer
 

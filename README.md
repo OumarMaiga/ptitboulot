@@ -65,3 +65,14 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 "# ptitboulot" 
+
+## Personnalisation
+Logiciels à installer
+    - PHP 7.4.9
+    - Laravel 1.5.0
+    - Compser 2.0.12
+Base de donnée:
+    -Mysql
+    Pour mettre à jour la base de donnée utilise la commande "php artisan migrate"
+    
+

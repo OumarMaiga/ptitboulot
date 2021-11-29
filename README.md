@@ -67,11 +67,22 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 "# ptitboulot" 
 
 ## Logiciels à installer
-- [PHP 7.4.9](https://php.net).
-- [Compser 2.0.12](https://getcomposer.org/).
-- [Laravel 1.5.0](https://laravel.com/).
-Base de donnée:
-    -Mysql
-    Pour mettre à jour la base de donnée utilise la commande "php artisan migrate"
+
+- **[PHP 7.4.9](https://php.net)**
+- **[Compser 2.0.12](https://getcomposer.org/)**
+- **[Laravel 1.5.0](https://laravel.com/)**
+
+
+## Base de donnée:
+
+- Mysql
+
+Pour mettre à jour la base de donnée utilise la commande "php artisan migrate"
+
+## Authentification 
+
+- [Laravel Breeze](https://laravel.com/docs/8.x/starter-kits#laravel-breeze-installation)
+
+
     
 

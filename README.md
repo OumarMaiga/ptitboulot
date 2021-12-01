@@ -30,6 +30,7 @@ Pas besoin de lancer la commande d'installation puisque c'est déjà installer
 
 ## Quelques commandes importantes
 
+- **"composer install"** pour commencer le projet
 - **"php artisan migrate"** pour mettre à jour la base de donnée utilise la commande 
 - **"php artisan serve"** pour lancer le serveur
     

@@ -24,8 +24,13 @@
 
 Pas besoin de lancer la commande d'installation puisque c'est déjà installer
 
+## Librairie utilisés
+
+- **Bootstrap v5.1.3** pour le frontend
+
 ## Quelques commandes importantes
 
+- **"composer install"** pour commencer le projet
 - **"php artisan migrate"** pour mettre à jour la base de donnée utilise la commande 
 - **"php artisan serve"** pour lancer le serveur
     

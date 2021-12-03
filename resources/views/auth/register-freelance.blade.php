@@ -1,82 +1,107 @@
 <x-guest-layout>
-    <x-auth-card>
+  <x-auth-card>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+    <!-- Validation Errors -->
+    <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-        <form method="POST" action="{{ route('register_freelance') }}">
-            @csrf
+    <div class="flex items-center justify-end">
+      <x-button class="m-4">
+        {{ __('Connexion') }}
+      </x-button>
+    </div>
 
-            <!-- Userame -->
-            <div class="mt-4">
-                <x-label for="username" :value="__('Nom d\'utilisateur')" />
+    <div class="ml-16">
+      <h1 class="text-4xl">Inscription <span class="font-bold">Freelance</span></h1>
+      <h2 class="text-2xl mt-4">Bienvenue !</h2>
+      <p class="text-lg">Vous allez découvrir des offres chaque jour.</p>
 
-                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus />
-            </div>
-            
-            <!-- First_name -->
-            <div class="mt-4">
-                <x-label for="first_name" :value="__('Prenom')" />
+      <form method="POST" action="{{ route('register_freelance') }}" class="mt-2">
+        @csrf
+        <div class="space-x-4">
+          <!-- First_name -->
+          <div class="mt-4 inline-block">
+            <x-label for="first_name" :value="__('Prenom')" class="font-semibold uppercase text-sm" />
 
-                <x-input id="first_name" class="block mt-1 w-full" type="text" name="first_name" :value="old('first_name')" required autofocus />
-            </div>
-            
-            <!-- Last_name -->
-            <div class="mt-4">
-                <x-label for="last_name" :value="__('Nom')" />
+            <x-input id="first_name" class="mt-1" type="text" name="first_name" :value="old('first_name')" required autofocus />
+          </div>
 
-                <x-input id="last_name" class="block mt-1 w-full" type="text" name="last_name" :value="old('last_name')" required autofocus />
-            </div>
+          <!-- Last_name -->
+          <div class="mt-4 inline-block">
+            <x-label for="last_name" :value="__('Nom')" class="font-semibold uppercase text-sm" />
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-label for="email" :value="__('Email Professionnelle')" />
+            <x-input id="last_name" class="mt-1" type="text" name="last_name" :value="old('last_name')" required autofocus />
+          </div>
+        </div>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
-            </div>
+        <div class="space-x-4">
+          <!-- Email Address -->
+          <div class="mt-4 inline-block">
+            <x-label for="email" :value="__('Email pro')" class="font-semibold uppercase text-sm" />
 
-            <!-- Contact -->
-            <div class="mt-4">
-                <x-label for="phone" :value="__('Contact')" />
+            <x-input id="email" class="mt-1" type="email" name="email" :value="old('email')" required />
+          </div>
 
-                <x-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required />
-            </div>
+          <!-- Contact -->
+          <div class="mt-4 inline-block">
+            <x-label for="phone" :value="__('Téléphone / Whatsapp')" class="font-semibold uppercase text-sm" />
 
-            <!-- Address -->
-            <div class="mt-4">
-                <x-label for="address" :value="__('Adresse')" />
+            <x-input id="phone" class="mt-1" type="text" name="phone" :value="old('phone')" required />
+          </div>
+        </div>
 
-                <x-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required />
-            </div>
+        <!-- Address -->
+        <div class="mt-4">
+          <x-label for="address" :value="__('Adresse')" class="font-semibold uppercase text-sm" />
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+          <x-input id="address" class="block mt-1 w-3/5" type="text" name="address" :value="old('address')" placeholder="Bacodjicoroni ACI, Bamako, Mali" required />
+        </div>
 
-                <x-input id="password" class="block mt-1 w-full"
-                                type="password"
-                                name="password"
-                                required autocomplete="new-password" />
-            </div>
+        <!-- Userame -->
+        <div class="mt-4">
+          <x-label for="username" :value="__('Nom d\'utilisateur')" class="font-semibold uppercase text-sm" />
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-label for="password_confirmation" :value="__('Confirm Password')" />
+          <x-input id="username" class="block mt-1 w-3/5" type="text" name="username" :value="old('username')" required autofocus />
+        </div>
 
-                <x-input id="password_confirmation" class="block mt-1 w-full"
-                                type="password"
-                                name="password_confirmation" required />
-            </div>
+        <div class="space-x-4">
+          <!-- Password -->
+          <div class="mt-4 inline-block">
+            <x-label for="password" :value="__('Mot de passe')" class="font-semibold uppercase text-sm" />
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+            <x-input id="password" class="mt-1" type="password" name="password" required autocomplete="new-password" />
+          </div>
+
+          <!-- Confirm Password -->
+          <div class="mt-4 inline-block">
+            <x-label for="password_confirmation" :value="__('Confirmer mot de passe')" class="font-semibold uppercase text-sm" />
+
+            <x-input id="password_confirmation" class="block mt-1" type="password" name="password_confirmation" required />
+          </div>
+        </div>
+
+
+
+        <div class="items-center mt-4">
+          <!-- <a class="block underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
                     {{ __('Already registered?') }}
-                </a>
+                </a> -->
 
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
-            </div>
-        </form>
-    </x-auth-card>
+          <!-- Terms and Conditions -->
+          <div class="block mt-4">
+            <label for="conditions" class="inline-flex items-center">
+              <input id="conditions" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="conditions">
+              <span class="ml-2 text-sm text-gray-600">{{ __('J\'accepte les termes et conditions d\'utilisation') }}</span>
+            </label>
+          </div>
+
+          <p class="text-xs mt-2">En cliquant sur 'Créer un compte', vous acceptez nos termes et conditions.<br /> Notre politique de collecte et d'utilisation de données et de vos cookies est <br />détaillée dans notre politique de confidentialité. Nous pourrons vous contacter par email.<br /> Vous pourrez vous désinscrire à tout moment.</p>
+
+          <x-button class="mt-4 mb-8">
+            {{ __('Créer un compte freelance') }}
+          </x-button>
+        </div>
+      </form>
+
+    </div>
+  </x-auth-card>
 </x-guest-layout>

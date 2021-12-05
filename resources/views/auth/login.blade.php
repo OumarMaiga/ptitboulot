@@ -9,7 +9,7 @@
 
     <div class="flex items-center justify-end">
       <x-button class="m-4">
-        {{ __('INSCRIVEZ-VOUS MAINTENANT') }}
+        <a href="{{  route('register_freelance') }}">{{ __('INSCRIVEZ-VOUS MAINTENANT') }}</a>
       </x-button>
     </div>
 

@@ -1,12 +1,9 @@
 <x-guest-layout>
   <x-auth-card>
 
-    <!-- Validation Errors -->
-    <x-auth-validation-errors class="mb-4" :errors="$errors" />
-
     <div class="flex items-center justify-end">
       <x-button class="m-4">
-        {{ __('Connexion') }}
+        <a href="{{  route('login') }}">{{ __('Connexion') }}</a>
       </x-button>
     </div>
 
@@ -14,6 +11,9 @@
       <h1 class="text-4xl">Inscription <span class="font-bold">Freelance</span></h1>
       <h2 class="text-2xl mt-4">Bienvenue !</h2>
       <p class="text-lg">Vous allez découvrir des offres chaque jour.</p>
+
+    <!-- Validation Errors -->
+    <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
       <form method="POST" action="{{ route('register_freelance') }}" class="mt-2">
         @csrf

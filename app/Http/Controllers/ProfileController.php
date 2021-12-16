@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Repositories\UserRepository;
 
-class ProfilController extends Controller
+class ProfileController extends Controller
 {
     protected $userRepository;
 
@@ -22,7 +22,7 @@ class ProfilController extends Controller
     public function show($id)
     {
         $user = $this->userRepository->getByForeignKey('username', $id);
-        return view('profils.show', compact('user'));
+        return view('profiles.show', compact('user'));
     }
 
     /**
@@ -34,7 +34,7 @@ class ProfilController extends Controller
     public function edit($id)
     {
         $user = $this->userRepository->getByForeignKey('username', $id);
-        return view('profils.edit', compact('user'));
+        return view('profiles.edit', compact('user'));
     }
 
     /**
@@ -51,7 +51,7 @@ class ProfilController extends Controller
             //'email' => ['required', 'string', 'email', 'max:255', 'unique:users']
         ]);
         $this->userRepository->update($id, $request->all());
-        return redirect("/profil/$request->username");
+        return redirect("/profile/$request->username");
     }
 
     /**

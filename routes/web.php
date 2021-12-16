@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CompanyController;
+use App\Http\Controllers\OfferController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,14 +17,21 @@ use App\Http\Controllers\ProfilController;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::resource('/profil', ProfilController::class)
+Route::resource('/profile', ProfileController::class)
         ->only(['show', 'edit', 'update', 'destroy'])
+        ->middleware('auth');
+
+Route::resource('/company', CompanyController::class)
+        ->middleware('auth');
+
+
+Route::resource('/offer', OfferController::class)
         ->middleware('auth');
 
 require __DIR__.'/auth.php';

@@ -32,8 +32,8 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        if(Auth::user()->category === "admin") {
-            return redirect('/dashboard')->withWelcome("Bienvenue <strong>".Auth::user()->first_name." ".Auth::user()->last_name."</strong>");
+        if(Auth::user()->category === "annonceur") {
+            return redirect('/dashboard');
         } else {
             return redirect()->intended(RouteServiceProvider::HOME);
         }

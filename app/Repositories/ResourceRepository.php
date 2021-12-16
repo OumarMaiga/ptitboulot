@@ -28,4 +28,8 @@
         public function destroy($id) {
             $this->getById($id)->delete();
         }
+
+        public function getBySlug($slug) {
+            return $this->model->where('slug', $slug)->first();
+        }
     }

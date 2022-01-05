@@ -24,9 +24,9 @@
 
 <body class="antialiased">
   <!-- Menu section -->
-  <div class="flex items-top justify-center sm:items-center py-16 sm:pt-0 border-b border-slate-400">
+  <div class="flex items-top justify-center sm:items-center bg-white py-16 sm:pt-0 border-b border-slate-400">
     @if (Route::has('login'))
-    <div class="hidden fixed top-0 right-0 px-6 py-2 sm:block">
+    <div class="hidden fixed bg-white top-0 right-0 px-6 py-2 sm:block">
       @auth
       <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 no-underline">Dashboard</a>
       @else
@@ -118,8 +118,29 @@
   <div class="container mt-48">
     <h1 class="font-bold text-4xl text-center text-red-500">Une plateforme responsable</h1>
     <p class="font-medium text-2xl text-center text-black leading-none">un tremplin vers l’emploi pour chaque jeune<br /> et une solution innovante pour toutes les entreprises</p>
-    <div class="bg-gray-700 rounded-md mt-8 h-44"></div>
-    <div class="mt-20"></div>
+    <div class="bg-gray-700 rounded-md mt-8 h-44 mx-32"></div>
+    <div class="mt-10">
+      <div class="grid grid-cols-2 p-6 border-gray-400 mx-32">
+        <div class="flex justify-start">
+          <div class="px-4">
+            <h2 class="font-bold text-3xl">Un cadre juridique simple et légal</h2>
+            <p class="text-lg font-base mt-14">Les Staffers sont tous des prestataires habilités à effectuer des prestations de service. StaffMe est une plateforme ouverte qui permet aux freelances de réaliser des prestations pour plusieurs clients.</p>
+            <x-button class="">
+              {{ __('Création d\'opportunités') }}
+            </x-button>
+          </div>
+        </div>
+        <div class="flex justify-end">
+          <div class="px-4">
+            <h2 class="font-bold text-3xl">Des formations accessibles via learn ptitboulot</h2>
+            <p class="text-lg font-base mt-6">Parce que nous pensons que le développement de l'employabilité passe par l'expérience mais aussi par la formation, nous avons créé notre propre organisme de formation pour les freelances : learn ptitboulot !</p>
+            <x-button class="">
+              {{ __('Des formations pour tous') }}
+            </x-button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <!-- BOOTSTRAP JS -->

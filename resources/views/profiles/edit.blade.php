@@ -9,7 +9,7 @@
     <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
     <div class="ml-16 mt-4">
-      <form method="POST" action="{{ route('profil.update', $user->id) }}">
+      <form method="POST" action="{{ route('profile.update', $user->id) }}">
         @csrf
         @method('put')
 

@@ -7,11 +7,10 @@
           <div class="flex justify-end mb-4">
             <x-button>
               @if (Auth::user()->username === $user->username)
-              <a href="{{ route('profil.edit', $user->username) }}" style="color: white;">Modifier profil</a>
+              <a href="{{ route('profile.edit', $user->username) }}" style="color: white;">Modifier profil</a>
               @endif
             </x-button>
           </div>
-
 
           <h1 class="flex justify-center font-bold text-4xl text-gray-800 leading-tight capitalize">
             {{ $user->first_name }} {{ $user->last_name }}

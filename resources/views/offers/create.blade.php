@@ -1,5 +1,5 @@
 <x-app-layout>
-    <h2>Créer une offre</h2>
+    <h2>Creer une offre</h2>
     <form method="POST" action="{{ route('offer.store') }}">
         @csrf
 

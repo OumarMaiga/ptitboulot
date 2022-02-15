@@ -1,0 +1,38 @@
+a {
+    text-decoration: none !important;
+}
+/*---------- PROFIL ----------*/
+/* Entete */
+.profil-avatar {
+    margin-top: -8rem;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 1rem solid rgb(185 28 28);;
+}
+.icon-rs {
+    display: inline-block;
+    height: 30px;
+    margin-top: -1rem;
+}
+/* Tab */
+.tab div {
+    cursor: pointer;
+    transition: 0.3s;
+}
+.tab div:hover {
+    color: rgb(185 28 28);
+}
+.tab div.active {
+    color: rgb(185 28 28);
+}
+.tabcontent {
+    display: none;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }

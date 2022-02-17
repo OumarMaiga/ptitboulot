@@ -62,7 +62,7 @@
                                 <!-- Description -->
                                 <div class="mt-8">
                                     <x-label for="overview" :value="__('Description')" class="text-sm text-gray-500 mb-2" />
-                                    <textarea name="overview" id="overview" cols="56" rows="5" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" :value="$offer->overview"></textarea>
+                                    <textarea name="overview" id="overview" cols="56" rows="5" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" >{{ $offer->overview }}</textarea>
                                 </div>
                             </div>
                             <div>

@@ -130,15 +130,15 @@ class OfferController extends Controller
         return redirect('/offer')->withStatus('Entreprise supprimer');
     }
 
-    public function generateSlug($name) {
+    public function generateSlug($title) {
 
-        $nameCount = Offer::where('title', $name)->count();
+        $titleCount = Offer::where('title', $title)->count();
         
-        if ($nameCount > 0) {
-            $slug = Str::slug($name)."-".$nameCount;
+        if ($titleCount > 0) {
+            $slug = Str::slug($title)."-".$titleCount;
         }
         else {
-            $slug = Str::slug($name);
+            $slug = Str::slug($title);
         }
 
         return $slug;

@@ -38,7 +38,7 @@
         <!-- Date de creation -->
         <div>
             <x-label for="creation_date" :value="__('Date de creation')" class="font-semibold uppercase text-sm" />
-            <x-input id="creation_date" class="block mt-1 w-3/5" type="text" name="creation_date" :value="old('creation_date')" />
+            <x-input id="creation_date" class="block mt-1 w-3/5" type="date" name="creation_date" :value="old('creation_date')" />
         </div>
         <!-- Domaine -->
         <div>

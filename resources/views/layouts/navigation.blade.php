@@ -15,9 +15,9 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('company.index')">
+                    <!--<x-nav-link :href="route('company.index')">
                         {{ __('Entreprises') }}
-                    </x-nav-link>
+                    </x-nav-link>-->
                     <x-nav-link :href="route('offer.index')">
                         {{ __('Offres') }}
                     </x-nav-link>
@@ -75,9 +75,9 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('company.index')">
+            <!--<x-responsive-nav-link :href="route('company.index')">
                 {{ __('Entreprises') }}
-            </x-responsive-nav-link>
+            </x-responsive-nav-link>-->
         </div>
 
         <!-- Responsive Settings Options -->

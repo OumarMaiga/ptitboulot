@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\OfferController;
+use App\Http\Controllers\PageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -30,8 +31,11 @@ Route::resource('/profile', ProfileController::class)
 Route::resource('/company', CompanyController::class)
         ->middleware('auth');
 
-
 Route::resource('/offer', OfferController::class)
         ->middleware('auth');
+
+Route::get('/home', [PageController::class, 'home'])->name('home');
+Route::get('/apply-for-job', [PageController::class, 'apply_page'])->name('apply-for-job');
+Route::post('/apply-for-job', [PageController::class, 'apply'])->name('apply-for-job');
 
 require __DIR__.'/auth.php';

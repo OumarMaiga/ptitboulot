@@ -19,9 +19,9 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($username)
     {
-        $user = $this->userRepository->getByForeignKey('username', $id);
+        $user = $this->userRepository->getByUsername($username);
         return view('profiles.show', compact('user'));
     }
 
@@ -31,9 +31,9 @@ class ProfileController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($username)
     {
-        $user = $this->userRepository->getByForeignKey('username', $id);
+        $user = $this->userRepository->getByUsername($username);
         return view('profiles.edit', compact('user'));
     }
 

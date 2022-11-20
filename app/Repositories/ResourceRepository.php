@@ -13,10 +13,6 @@
             return $this->model->findOrFail($id);
         }
 
-        public function getByForeignKey($name, $value) {
-            return $this->model->where($name, $value)->first();
-        }
-
         public function store($inputs) {
             return $this->model->create($inputs);
         }
